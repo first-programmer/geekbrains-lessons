@@ -1,13 +1,23 @@
-fileName=$1;
-upper=$2;
-deleteBlankLines=$3;
+fileName=${1:-"./files/file.txt"};
+deleteBlankLines=${2:-"true"};
+
+echo "This is text before editing: ";
+cat $fileName;
 
 if [[ $deleteBlankLines = "true" ]]
     then
-	sed -ri "/^\s*$/d" $fileName;
+	    sed -Ei "/^\s*$/d" $fileName;
 fi
 
-if [[ $upper = "true" ]]
+echo "If you want change file text case to UPPER write yes otherwise write no: "
+read upper;
+
+if [[ $upper = "yes" ]]
     then
-	sed -ri "s/(.+)/\U&/g" $fileName;
+	    sed -Ei "s/(.+)/\U&/g" $fileName;
+	else
+	    sed -Ei "s/(.+)/\L&/g" $fileName;
 fi
+
+echo "This is text after editing: ";
+cat $fileName;

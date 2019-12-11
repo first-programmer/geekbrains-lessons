@@ -1,2 +1,3 @@
-SOME SIMPLE TEXT.
-SOME SIMPLE TEXT AFTER BLANK LINE.
+some simple text.
+
+some simple text after blank line.

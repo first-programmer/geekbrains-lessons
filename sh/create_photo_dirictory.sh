@@ -1,7 +1,7 @@
 #! /bin/bash
 #set -x;
 
-photoDirectory=${1:-"./photos"};
+photoDirectory=${1:-"./temp/photos"};
 numberFiles=${2:-10};
 fileExtension=${3:-"txt"};
 
