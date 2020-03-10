@@ -57,7 +57,7 @@ END#
 
 DELIMITER ;
 
--- Disable outocommit to prevent dublicate entry id for insert in example
+-- Disable autocommit to prevent dublicate entry id for insert in example
 SET AUTOCOMMIT = 0;
 
 INSERT INTO `users`(`name`, `birthday_at`) 
